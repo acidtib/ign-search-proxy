@@ -14,6 +14,9 @@ foreman start
 
 visit `http://localhost:5000`
 
+## Deploy to Production
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/f220i8?referralCode=nLHZEt)
+
 ## API
 
 ### Search Wiki Guides
