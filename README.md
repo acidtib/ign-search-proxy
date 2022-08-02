@@ -19,6 +19,8 @@ visit `http://localhost:5000`
 
 ## API
 
+There is an instance running at `https://ign-search.acidtib.com`
+
 ### Search Wiki Guides
 ```
 GET /api/v1/search/wiki
