@@ -19,6 +19,10 @@ class Nani < Sinatra::Base
     "Hello World!".to_json
   end
 
+	get "/health" do
+		halt 200
+	end
+
 	namespace '/api/v1' do
 
 		# matches "GET /api/v1/search/wiki?q=Cyberpunk 2077"
