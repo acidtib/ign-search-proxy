@@ -1,1 +1,1 @@
-web: bundle exec rackup -p 5000 --host 0.0.0.0
+web: bundle exec rackup -s puma -p 5000 --host 0.0.0.0
