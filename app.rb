@@ -16,7 +16,7 @@ class Nani < Sinatra::Base
   end
 
   get "/" do
-    "Hello World!".to_json
+    {docs: "https://github.com/acidtib/ign-search-proxy#api"}.to_json
   end
 
 	get "/health" do
