@@ -79,8 +79,57 @@ response-
 ```
 
 ---
+### Search Games
+```
+GET /api/v1/search/game
+params: 
+		q = search query
+		all = return all results, default is 0
+```
+examples:
+```json
+# by default only 1 matching result is returned
 
-### Search Site
+GET /api/v1/search/game?q=Scorn
+
+response-
+{
+  "data": [
+    {
+      "title": "Scorn - IGN",
+      "url": "https://www.ign.com/games/scorn"
+    }
+  ]
+}
+```
+
+---
+### Search Articles
+```
+GET /api/v1/search/article
+params: 
+		q = search query
+		all = return all results, default is 0
+```
+examples:
+```json
+# by default only 1 matching result is returned
+
+GET /api/v1/search/article?q=Scorn
+
+response-
+{
+  "data": [
+    {
+      "title": "Scorn Review - IGN",
+      "url": "https://www.ign.com/articles/scorn-review"
+    }
+  ]
+}
+```
+
+---
+### Search Entire Site
 ```
 GET /api/v1/search/site
 params: 
@@ -100,25 +149,6 @@ response-
       "title": "Cyberpunk 2077 [News] - IGN",
       "url": "https://www.ign.com/games/cyberpunk-2077"
     }
-  ]
-}
-```
-
-```json
-# use all=1 to get all matches
-
-GET /api/v1/search/site?q=Cyberpunk 2077&all=1
-
-response-
-{
-  "data": [
-    {
-      "title": "Cyberpunk 2077 [News] - IGN",
-      "url": "https://www.ign.com/games/cyberpunk-2077"
-    },
-    {
-      ....
-    },
   ]
 }
 ```

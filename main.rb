@@ -16,7 +16,7 @@ class Nani < Sinatra::Base
   end
 
   get "/" do
-    "read docs: https://github.com/acidtib/ign-search-proxy#api".to_json
+		{ "read docs": "https://github.com/acidtib/ign-search-proxy#api" }.to_json
   end
 
 	get "/health" do
@@ -33,12 +33,17 @@ class Nani < Sinatra::Base
 
 			google = Google.new()
 
-			if mode == "wiki"
+			case mode
+			when "wiki"
 				doc = google.wiki(q)
-			elsif mode == "site"
+			when "site"
 				doc = google.site(q)
+			when "game"
+				doc = google.game(q)
+			when "article"
+				doc = google.article(q)
 			else
-				raise RuntimeError, "wrong mode, site or wiki"
+				raise RuntimeError, "mode not found"
 			end
 
 			payload = {data: []}

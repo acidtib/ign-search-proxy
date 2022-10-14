@@ -34,4 +34,28 @@ class Google
 
 		self.class.get("/search", options)
 	end
+
+	def game(query = nil)
+		raise ArgumentError, "You must search for something" if query.nil?
+
+		options = {
+			query: {
+				q: "site:ign.com/games #{query}"
+			}
+		}
+
+		self.class.get("/search", options)
+	end
+
+	def article(query = nil)
+		raise ArgumentError, "You must search for something" if query.nil?
+
+		options = {
+			query: {
+				q: "site:ign.com/articles #{query}"
+			}
+		}
+
+		self.class.get("/search", options)
+	end
 end
