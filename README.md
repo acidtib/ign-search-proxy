@@ -1,6 +1,6 @@
 # IGN Search Proxy
 
-Small google search proxy for [ign.com](https://ign.com) and [ign.com/wikis](https://ign.com/wikis)
+Small google search proxy for [ign.com](https://ign.com), [ign.com/games](https://ign.com/games), [ign.com/articles](https://ign.com/articles) and [ign.com/wikis](https://ign.com/wikis)
 
 ## Quick Start
 ---
