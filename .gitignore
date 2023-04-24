@@ -20,3 +20,4 @@
 !/tmp/pids/.keep
 
 .env
+.env.docker

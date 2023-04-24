@@ -15,14 +15,15 @@ worker_timeout 3600 if ENV.fetch("SINATRA_ENV", "development") == "development"
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
-port ENV.fetch("PORT") { 5000 }
+# port ENV.fetch("PORT") { 3004 }
+bind "tcp://0.0.0.0:#{ENV['PORT'] || 3004}"
 
 # Specifies the `environment` that Puma will run in.
 #
 environment ENV.fetch("SINATRA_ENV") { "development" }
 
 # Specifies the `pidfile` that Puma will use.
-pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+# pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 rackup 'config.ru'
 
