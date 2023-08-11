@@ -19,7 +19,7 @@ visit `http://localhost:3004`
 
 ## API
 
-There is an instance running at `https://ign-search.acidtib.com`
+There is an instance running at `https://ign-search.acidtib.cloud`
 
 ### Search Wiki Guides
 ```

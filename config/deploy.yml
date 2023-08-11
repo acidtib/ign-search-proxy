@@ -10,7 +10,7 @@ servers:
     hosts:
       - 51.89.219.181
     labels:
-      traefik.http.routers.ign-gg-proxy-web.rule: Host(`ign-search.acidtib.com`)
+      traefik.http.routers.ign-gg-proxy-web.rule: Host(`ign-search.acidtib.cloud`)
       traefik.http.services.ign-gg-proxy-web.loadbalancer.healthcheck.interval: 120s
 
 # Credentials for your image host.
