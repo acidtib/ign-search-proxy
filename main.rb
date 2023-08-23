@@ -49,7 +49,7 @@ class Nani < Sinatra::Base
 			payload = {data: []}
 
 			doc.css("#search #rso div.g").each do |result|
-				sec = result.xpath("./div/div[1]/div/a")[0]
+				sec = result.css("div div a")[0]
 				url = sec["href"]
 				title = sec.xpath("./h3").text
 
