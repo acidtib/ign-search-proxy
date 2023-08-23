@@ -3,7 +3,8 @@ FROM ruby:3.2.2-alpine
 RUN apk add --no-cache \
   build-base \
   libxml2-dev \
-  libxslt-dev
+  libxslt-dev \
+  curl
 
 WORKDIR /usr/src/app
 

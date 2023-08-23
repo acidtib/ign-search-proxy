@@ -11,7 +11,6 @@ servers:
       - 51.89.219.181
     labels:
       traefik.http.routers.ign-gg-proxy-web.rule: Host(`ign-search.acidtib.cloud`)
-      traefik.http.services.ign-gg-proxy-web.loadbalancer.healthcheck.interval: 120s
 
 # Credentials for your image host.
 registry:
@@ -77,3 +76,5 @@ builder:
 healthcheck:
   path: /health
   port: 3004
+  interval: 75s
+  max_attempts: 15
